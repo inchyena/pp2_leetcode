@@ -1,0 +1,50 @@
+class Solution(object):
+   def defangIPaddr(self, address):
+      address = address.split(".")
+      return "[.]".join(address)
+ob1 = Solution()
+print(ob1.defangIPaddr("192.168.4.1"))
+
+
+class Solution: 
+def interpret(self, command: str) -> str: 
+        command = command.replace("()", "o").replace("(al)", "al") 
+        return command
+        
+        
+class Solution:
+    def numIdenticalPairs(self,nums):
+        f={}
+        ans=0
+        for num in nums:
+            if not num in f:
+                f[num]=0
+                f[num]+=1
+                
+            for num in f:
+                n=f[num]
+                ans+=(n*(n-1)/2)
+                return ans
+                
+  
+class Solution:
+    def largestAltitude(self, gain):
+        ans=[]
+        ans.append(0)
+        for i in range(0,len(gain)):
+            tmp=ans[i]+gain[i]
+            ans.append(tmp)
+            
+        return max(ans)
+
+
+
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        sum, product = 0, 1
+        while n:
+          digit = n % 10
+          sum += digit
+          product *= digit
+          n //= 10
+        return product - sum
